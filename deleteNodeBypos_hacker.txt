@@ -1,0 +1,27 @@
+public static SinglyLinkedListNode deleteNode(SinglyLinkedListNode llist, int pos) {
+    // Write your code here
+        int n =getlength(llist);
+        SinglyLinkedListNode it =llist;
+        if(llist==null || llist.next==null){
+            return null;
+        }
+        else if(pos==0){
+                llist=it.next;
+                it.next=null;
+                it=null;
+        }
+        else if(pos>0 && pos<=n){
+            SinglyLinkedListNode itp =null;
+            for(int i=0;i<pos;i++){
+                itp=it;
+                it=it.next;
+            }
+            itp.next=it.next;
+            it.next=null;
+            it=null;
+        }
+        
+        return llist;
+
+    }
+}

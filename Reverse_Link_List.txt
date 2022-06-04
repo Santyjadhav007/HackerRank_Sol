@@ -1,0 +1,16 @@
+ public static SinglyLinkedListNode reverse(SinglyLinkedListNode head) {
+    // Write your code here
+        SinglyLinkedListNode itp=null;
+        SinglyLinkedListNode it=head;
+        SinglyLinkedListNode itn = head;
+        if(head==null){
+            return null;
+        }
+        while(it!=null){
+            itn=it.next;
+            it.next = itp;
+            itp=it;
+            it=itn;
+        }
+        return itp;
+    }
