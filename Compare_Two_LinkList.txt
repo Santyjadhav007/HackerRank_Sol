@@ -2,6 +2,7 @@
         int c=0;  
         while(it!=null){
             c++;
+//hello dilip
             it=it.next;
         }
         return c;
