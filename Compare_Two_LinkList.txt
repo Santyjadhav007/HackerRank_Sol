@@ -1,6 +1,6 @@
  public static int getlength(SinglyLinkedListNode it){
-        int c=0;  
-        while(it!=null){
+        int c=1;  
+        while(it.next!=null){
             c++;
             it=it.next;
         }
@@ -18,7 +18,7 @@
                 }
                 head1=head1.next;
                 head2=head2.next;
-                n--;
+                n=n-1;
             }
             return true;
         }
